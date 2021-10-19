@@ -5,7 +5,7 @@ By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that 
 
 What is the 10001st prime number?
 '''
-from aritmetic import prime_or_not
+from arithmetic import prime_or_not
 
 def nst_prime(order):
     prime_order = 1

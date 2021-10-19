@@ -9,7 +9,7 @@ For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 a
 Evaluate the sum of all the amicable numbers under 10000.
 '''
 
-from aritmetic import all_factors
+from arithmetic import all_factors
 
 def d(n):
     """take a number; give sum of all factors"""
