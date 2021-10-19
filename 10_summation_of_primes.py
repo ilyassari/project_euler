@@ -5,7 +5,7 @@ The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 Find the sum of all the primes below two million.
 '''
 
-from primes import prime_or_not
+from aritmetic import prime_or_not
 
 def sum_primes(boundary):
     total = 2 #2 is the first prime number

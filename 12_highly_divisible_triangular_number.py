@@ -18,7 +18,7 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 '''
 
-from primes import prime_factorization
+from aritmetic import prime_factorization
 
 def hidivtrinu(n): #çok yavaş
     numbers = [1] # list of triangle numbers
