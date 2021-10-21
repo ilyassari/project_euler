@@ -7,6 +7,7 @@ def factorial(n):
 def sqrt(n):
     return (math.sqrt(n))
 
+
 """ NOT CLASSIFIED """
 
 def all_factors(number):
@@ -18,6 +19,13 @@ def all_factors(number):
             factors.append(divider)
         divider += 1
     return factors
+
+def find_root(number, exp, decimal):
+    num = 0
+    number *= 10 ** (decimal * exp)
+    while num ** exp < number:
+        num += 1
+    return num / 10 ** decimal
 
 """ PRIME NUMBERS """
 
