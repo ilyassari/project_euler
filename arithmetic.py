@@ -50,3 +50,12 @@ def prime_or_not(number):
             return False
         divider += 1
     return True
+
+def prime_list(boundary):
+    """ take a number return a list of prime numbers under number """
+    numbers = list(range(2, boundary))
+    for num in numbers:
+        for check in numbers:
+            if check != num and check % num == 0:
+                numbers.remove(check)
+    return numbers
