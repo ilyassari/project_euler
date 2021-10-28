@@ -59,3 +59,40 @@ def prime_list(boundary):
             if check != num and check % num == 0:
                 numbers.remove(check)
     return numbers
+
+""" Greatest Common Divisor and Least Common Multiple """
+
+def gcd(*numbers):
+    """ take numbers as integers; return greatest common divisor"""
+    result = 1
+    numbers = list(numbers)
+    max_number = max(numbers)
+    primes = prime_list(max_number + 1)
+    while any(x != 1 for x in numbers):
+        for prime in primes:
+            while any(x % prime == 0 for x in numbers):
+                temp = numbers.copy()
+                for i in range(len(numbers)):
+                    if numbers[i] % prime == 0:
+                        numbers[i] /= prime
+                if all(int(numbers[i]) != int(temp[i]) for i in range(len(numbers))):
+                    result *= prime
+    return result
+
+def lcm(*numbers):
+    """ take numbers as integer; return least common multiple"""
+    result = 1
+    numbers = list(numbers)
+    max_number = max(numbers)
+    primes = prime_list(max_number + 1)
+    while any(x != 1 for x in numbers):
+        for prime in primes:
+            while any(x % prime == 0 for x in numbers):
+                temp = numbers.copy()
+                for i in range(len(numbers)):
+                    if numbers[i] % prime == 0:
+                        numbers[i] /= prime
+                if numbers != temp:
+                    result *= prime
+    return result
+
