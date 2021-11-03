@@ -63,7 +63,10 @@ def prime_list(boundary):
 """ Greatest Common Divisor and Least Common Multiple """
 
 def gcd(*numbers):
-    """ take numbers as integers; return greatest common divisor"""
+    """ take numbers as integers or as one list or one tuple;
+        return greatest common divisor"""
+    if isinstance(numbers[0], (list, tuple)):
+        numbers = numbers[0]
     result = 1
     numbers = list(numbers)
     max_number = max(numbers)
@@ -80,7 +83,10 @@ def gcd(*numbers):
     return result
 
 def lcm(*numbers):
-    """ take numbers as integer; return least common multiple"""
+    """ take numbers as integers or as one list or one tuple;
+        return least common multiple"""
+    if isinstance(numbers[0], (list, tuple)):
+        numbers = numbers[0]
     result = 1
     numbers = list(numbers)
     max_number = max(numbers)
@@ -95,4 +101,3 @@ def lcm(*numbers):
                 if numbers != temp:
                     result *= prime
     return result
-
