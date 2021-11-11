@@ -101,3 +101,22 @@ def lcm(*numbers):
                 if numbers != temp:
                     result *= prime
     return result
+
+
+""" Base Arithmetic """
+# binary: 2     octal: 8    decimal: 10     hexadecimal: 16
+
+def decimal_to(number, new_base):
+    result = str()
+    while number >= new_base:
+        number = number // new_base
+        result += str(number % new_base)
+    return (result[::-1] + str(number))
+
+def decimal2binary(number):
+    """ take number in decimal; return number in binary system """
+    return decimal_to(number, 2)
+
+def decimal2octal(number):
+    """ take number in decimal; return number in octal system """
+    return decimal_to(number, 8)
